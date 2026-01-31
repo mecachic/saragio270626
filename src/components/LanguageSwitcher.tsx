@@ -5,7 +5,7 @@ import { useI18n } from "@/i18n/I18nContext";
 
 function coerceLang(value: unknown): Lang {
   const v = String(value || "").toLowerCase();
-  return (SUPPORTED_LANGS.includes(v as Lang) ? (v as Lang) : "es");
+  return (SUPPORTED_LANGS.includes(v as Lang) ? (v as Lang) : "it");
 }
 
 const LanguageSwitcher = () => {
