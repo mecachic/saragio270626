@@ -86,7 +86,7 @@ export const TRANSLATIONS: Record<Lang, Dict> = {
       "Sono più che benvenuti. Avremo animatori per far divertire i più piccoli mentre voi vi godete la festa in tranquillità.",
     "quick.rsvp.title": "Conferma presenza",
     "quick.rsvp.body":
-      "Vi chiediamo di confermare il prima possibile per organizzare con calma la prenotazione di camere e transfert.",
+      "Vi chiediamo di confermare il prima possibile per organizzare con calma l'evento.",
 
     "acc.kicker": "DOVE ALLOGGIARE",
     "acc.title": "Alloggio e trasferimento",
