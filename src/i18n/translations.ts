@@ -1,4 +1,4 @@
-export type Lang = "es" | "it" | "de";
+export type Lang = "it";
 
 type Dict = Record<string, string>;
 
@@ -7,162 +7,6 @@ type Dict = Record<string, string>;
 // - Prefer short, UI-friendly strings.
 // - You can later refine tone/wording without touching components.
 export const TRANSLATIONS: Record<Lang, Dict> = {
-  es: {
-    "lang.name": "ES",
-
-    // Intro
-    "intro.aria.open": "Abrir invitación",
-    "intro.tap": "Toca para abrir",
-
-    // Hero
-    "hero.label": "Nos casamos",
-    "hero.month": "Junio",
-    "hero.location": "Masseria Falco • Cellole",
-    "hero.scroll": "Desliza para continuar",
-
-    // Countdown
-    "countdown.kicker": "Cuenta atrás para",
-    "countdown.title": "Nuestro gran día",
-    "countdown.days": "Días",
-    "countdown.hours": "Horas",
-    "countdown.minutes": "Minutos",
-    "countdown.seconds": "Segundos",
-
-    // Footer
-    "footer.dateLine": "27 de junio de 2026 • Masseria Falco, Cellole (CE), Italia",
-    "footer.thanks": "Gracias por celebrar este momento con nosotros. ¡Tenemos muchas ganas de veros allí!",
-    "footer.made": "Hecho con cariño para nuestra familia y amigos",
-
-    // Details
-    "details.kicker": "ACOMPÁÑANOS",
-    "details.title": "Detalles",
-    "details.date.title": "Fecha",
-    "details.date.content": "Sábado, 27 de junio de 2026",
-    "details.time.title": "Hora",
-    "details.time.content": "La ceremonia comienza a las 17:00",
-    "details.venue.title": "Lugar",
-    "details.venue.content": "Masseria Falco",
-    "details.venue.sub": "Via Quintola, 1 • loc. Civette • 81030 Cellole (CE), Italia",
-    "details.map": "Ver en Google Maps",
-    "details.imgAlt": "Lugar de la boda",
-
-    // Timeline
-    "timeline.kicker": "Itinerario",
-    "timeline.title": "Orden del día",
-    "timeline.e1.time": "17:00",
-    "timeline.e1.title": "Cóctel de bienvenida",
-    "timeline.e1.desc": "Aperitivo de bienvenida en el jardín",
-    "timeline.e2.time": "18:00",
-    "timeline.e2.title": "Ceremonia",
-    "timeline.e2.desc": "Intercambio de votos",
-    "timeline.e3.time": "19:00",
-    "timeline.e3.title": "Apertura buffet",
-    "timeline.e3.desc": "Selección de aperitivos",
-    "timeline.e4.time": "20:00",
-    "timeline.e4.title": "Llegada de los novios",
-    "timeline.e4.desc": "Brindis y saludos",
-    "timeline.e5.time": "20:30",
-    "timeline.e5.title": "Cena",
-    "timeline.e5.desc": "Inicio de la cena",
-    "timeline.e6.time": "22:30",
-    "timeline.e6.title": "Tarta nupcial",
-    "timeline.e6.desc": "Momento tarta",
-    "timeline.e7.time": "23:00",
-    "timeline.e7.title": "Fiesta",
-    "timeline.e7.desc": "Barra libre y baile",
-
-    // Quick details
-    "quick.kicker": "DETALLES RÁPIDOS",
-    "quick.title": "Para que todo sea fácil",
-    "quick.parking.title": "Llegada y aparcamiento",
-    "quick.parking.body":
-      "La masseria se encuentra en plena naturaleza y dispone de una amplia zona de aparcamiento privado dentro del recinto, para que podáis llegar con total comodidad y sin preocupaciones.",
-    "quick.dress.title": "Dress Code",
-    "quick.dress.body":
-      "Elegante, libre y con color. Nos encanta que cada invitado exprese su estilo: lo importante es que vengáis cómodos, guapos y vosotros mismos.",
-    "quick.menu.title": "Menú",
-    "quick.menu.body":
-      "El menú estará centrado principalmente en pescado y propuestas mediterráneas, con opciones variadas pensadas para que todos puedan disfrutar cómodamente de la cena.",
-    "quick.allergies.title": "Alergias o restricciones",
-    "quick.allergies.body":
-      "Indícanos cualquier alergia o restricción alimentaria al confirmar asistencia y la adaptaremos.",
-    "quick.kids.title": "Niños",
-    "quick.kids.body":
-      "Son más que bienvenidos. Contaremos con animadores para que los más pequeños se diviertan mientras vosotros disfrutáis con total tranquilidad.",
-    "quick.rsvp.title": "Confirmación de asistencia",
-    "quick.rsvp.body":
-      "Os agradeceremos que confirméis lo antes posible para poder organizarlo todo con calma.",
-
-    // Accommodation
-    "acc.kicker": "DÓNDE ALOJARSE",
-    "acc.title": "Alojamiento y traslado",
-    "acc.p1": "Para la noche del sábado, queremos que solo tengáis que disfrutar.",
-    "acc.b1": "Al llegar a Nápoles, nos encargaremos de organizar el traslado, si lo necesitáis.",
-    "acc.b2":
-      "El alojamiento estará ubicado muy cerca del lugar de celebración, de modo que podáis concentraros únicamente en disfrutar del evento sin atender a horarios ni desplazamientos.",
-    "acc.p2":
-      "Todo lo coordinaremos personalmente con vosotros una vez confirmada la asistencia, para que no tengáis que preocuparos por nada.",
-
-    // Gifts
-    "gifts.kicker": "VUESTRA GENEROSIDAD",
-    "gifts.title": "Regalos",
-    "gifts.intro":
-      "Vuestra presencia es el mejor regalo. Si aun así os apetece tener un detalle con nosotros, dejamos aquí dos opciones, siempre de forma totalmente opcional.",
-    "gifts.trip.title": "Viaje futuro",
-    "gifts.trip.body":
-      "No haremos luna de miel justo después de la boda. Más adelante nos gustaría realizar un viaje especial, y Japón es uno de nuestros grandes sueños. Si queréis contribuir a hacerlo realidad, os lo agradeceremos muchísimo.",
-    "gifts.contrib.title": "Aportación",
-    "gifts.contrib.body":
-      "Para quienes prefieran hacer una aportación, os dejamos los datos de forma discreta. No es en absoluto necesario, pero será recibido con enorme cariño.",
-    "gifts.iban.show": "Ver IBAN",
-    "gifts.iban.hide": "Ocultar IBAN",
-    "gifts.iban.copy": "Copiar",
-    "gifts.iban.copied": "Copiado",
-    "gifts.iban.ask": "Si lo prefieres, también puedes pedirnos los datos por mensaje.",
-    "gifts.iban.aria": "Copiar IBAN",
-
-    // RSVP
-    "rsvp.kicker": "CONFIRMACIÓN",
-    "rsvp.title": "RSVP",
-    "rsvp.deadline": "Por favor, responded antes del ",
-    "rsvp.deadline.date": "1 de abril de 2026",
-    "rsvp.name.label": "Nombre y apellidos *",
-    "rsvp.name.placeholder": "Escribe tu nombre",
-    "rsvp.email.label": "Email *",
-    "rsvp.email.placeholder": "nombre@correo.com",
-    "rsvp.attending.label": "¿Asistirás? *",
-    "rsvp.attending.yes": "Sí, asistiré",
-    "rsvp.attending.yes.hint": "Confirmo",
-    "rsvp.attending.no": "No podré asistir",
-    "rsvp.attending.no.hint": "Lo siento",
-    "rsvp.guests.label": "¿Cuántas personas vendréis? *",
-    "rsvp.guests.help": "Incluye tu asistencia en el total.",
-    "rsvp.guests.1": "1 persona",
-    "rsvp.guests.2": "2 personas",
-    "rsvp.guests.3": "3 personas",
-    "rsvp.guests.4": "4 personas",
-    "rsvp.guests.5": "5 personas",
-    "rsvp.guests.6": "6 personas",
-    "rsvp.dietary.label": "Alergias o restricciones (opcional)",
-    "rsvp.dietary.placeholder": "Vegetariano, vegano, intolerancias, etc.",
-    "rsvp.companions.label": "Nombres de los acompañantes (opcional)",
-    "rsvp.companions.placeholder": "Ej.: Marta López, Carlos Pérez...",
-    "rsvp.message.label": "Nota para los novios (opcional)",
-    "rsvp.message.placeholder": "Dejadnos aquí cualquier comentario...",
-    "rsvp.submit": "Enviar confirmación",
-    "rsvp.submitting": "Enviando...",
-    "rsvp.toast.success": "¡Gracias por confirmar!",
-    "rsvp.toast.success.desc":
-      "Hemos recibido vuestra respuesta. Si hace falta, os contactaremos para coordinar los detalles.",
-    "rsvp.toast.error": "No se pudo enviar el RSVP",
-    "rsvp.toast.error.desc":
-      "Revisa tu conexión e inténtalo de nuevo. Si persiste, avísanos por WhatsApp.",
-    "rsvp.err.name": "Indica tu nombre",
-    "rsvp.err.email": "Indica tu email",
-    "rsvp.err.email.invalid": "Email no válido",
-    "rsvp.err.attending": "Selecciona una opción",
-  },
-
   it: {
     "lang.name": "IT",
 
@@ -251,11 +95,11 @@ export const TRANSLATIONS: Record<Lang, Dict> = {
       "Sono più che benvenuti. Avremo animatori per far divertire i più piccoli mentre voi vi godete la festa in tranquillità.",
     "quick.rsvp.title": "Conferma presenza",
     "quick.rsvp.body":
-      "Vi chiediamo di confermare il prima possibile per organizzarci con calma.",
+      "Vi chiediamo di confermare il prima possibile per organizzare con calma la prenotazione di camere e transfert.",
 
     "acc.kicker": "DOVE ALLOGGIARE",
     "acc.title": "Alloggio e trasferimento",
-    "acc.p1": "Per la notte di sabato vogliamo che dobbiate solo divertirvi.",
+    "acc.p1": "Per la notte di sabato vorremmo solo che vi divertiste.",
     "acc.b1": "All’arrivo a Napoli, se necessario organizzeremo noi il trasferimento.",
     "acc.b2":
       "L’alloggio sarà molto vicino alla location, così potrete pensare solo a godervi l’evento senza orari o spostamenti.",
@@ -265,17 +109,16 @@ export const TRANSLATIONS: Record<Lang, Dict> = {
     "gifts.kicker": "LA VOSTRA GENEROSITÀ",
     "gifts.title": "Regali",
     "gifts.intro":
-      "La vostra presenza è il regalo più bello. Se però vi va di farci un pensiero, qui sotto trovate due opzioni, sempre del tutto facoltative.",
-    "gifts.trip.title": "Viaggio futuro",
-    "gifts.trip.body":
-      "Non faremo la luna di miele subito dopo il matrimonio. Più avanti vorremmo fare un viaggio speciale, e il Giappone è uno dei nostri grandi sogni. Se volete contribuire, ve ne saremo davvero grati.",
-    "gifts.contrib.title": "Contributo",
-    "gifts.contrib.body":
-      "Per chi preferisce fare un contributo, lasciamo i dati in modo discreto. Non è assolutamente necessario, ma sarà accolto con grande affetto.",
-    "gifts.iban.show": "Mostra IBAN",
+      "La vostra presenza sarà il regalo più bello. Se nel contempo vi va di farci un pensiero, qui sotto troverete le istruzioni.",
+        "gifts.contrib.title": "Contributo",
+        "gifts.iban.show": "Mostra IBAN",
     "gifts.iban.hide": "Nascondi IBAN",
     "gifts.iban.copy": "Copia",
     "gifts.iban.copied": "Copiato",
+    "gifts.iban.holder": "Intestatario",
+    "gifts.iban.holder.value": "Giovanni Rizzuti",
+    "gifts.iban.purpose": "Causale",
+    "gifts.iban.purpose.value": "Regalo di matrimonio",
     "gifts.iban.ask": "Se preferite, potete anche chiederci i dati via messaggio.",
     "gifts.iban.aria": "Copia IBAN",
 
@@ -319,173 +162,4 @@ export const TRANSLATIONS: Record<Lang, Dict> = {
     "rsvp.err.email.invalid": "Email non valida",
     "rsvp.err.attending": "Seleziona un'opzione",
   },
-
-  de: {
-    "lang.name": "DE",
-
-    "intro.aria.open": "Einladung öffnen",
-    "intro.tap": "Tippe zum Öffnen",
-
-    "hero.label": "Wir heiraten",
-    "hero.month": "Juni",
-    "hero.location": "Masseria Falco • Cellole",
-    "hero.scroll": "Scrollen zum Fortfahren",
-
-    "countdown.kicker": "Countdown bis",
-    "countdown.title": "Unser besonderer Tag",
-    "countdown.days": "Tage",
-    "countdown.hours": "Stunden",
-    "countdown.minutes": "Minuten",
-    "countdown.seconds": "Sekunden",
-
-    "footer.dateLine": "27. Juni 2026 • Masseria Falco, Cellole (CE), Italien",
-    "footer.thanks": "Danke, dass ihr diesen besonderen Moment mit uns feiert. Wir freuen uns sehr, euch dort zu sehen!",
-    "footer.made": "Mit Liebe gemacht – für unsere Familie und Freunde",
-
-    "footer.dateLine": "27. Juni 2026 • Masseria Falco, Cellole (CE), Italien",
-    "footer.thanks": "Danke, dass ihr diesen besonderen Moment mit uns feiert. Wir freuen uns sehr, euch dort zu sehen!",
-    "footer.made": "Mit Liebe gemacht für Familie und Freunde",
-
-    "footer.dateLine": "27. Juni 2026 • Masseria Falco, Cellole (CE), Italien",
-    "footer.thanks": "Danke, dass ihr diesen besonderen Moment mit uns feiert. Wir freuen uns sehr, euch dort zu sehen.",
-    "footer.made": "Mit Liebe gemacht für Familie und Freunde",
-
-    "countdown.kicker": "Countdown bis zu",
-    "countdown.title": "Unser besonderer Tag",
-    "countdown.days": "Tage",
-    "countdown.hours": "Stunden",
-    "countdown.minutes": "Minuten",
-    "countdown.seconds": "Sekunden",
-
-    "countdown.kicker": "Countdown bis",
-    "countdown.title": "Unser besonderer Tag",
-    "countdown.days": "Tage",
-    "countdown.hours": "Stunden",
-    "countdown.minutes": "Minuten",
-    "countdown.seconds": "Sekunden",
-
-    "details.kicker": "SEID DABEI",
-    "details.title": "Details",
-    "details.date.title": "Datum",
-    "details.date.content": "Samstag, 27. Juni 2026",
-    "details.time.title": "Uhrzeit",
-    "details.time.content": "Die Zeremonie beginnt um 17:00 Uhr",
-    "details.venue.title": "Ort",
-    "details.venue.content": "Masseria Falco",
-    "details.venue.sub": "Via Quintola, 1 • loc. Civette • 81030 Cellole (CE), Italien",
-    "details.map": "In Google Maps öffnen",
-    "details.imgAlt": "Hochzeitslocation",
-
-    "timeline.kicker": "Ablauf",
-    "timeline.title": "Tagesplan",
-    "timeline.e1.time": "17:00",
-    "timeline.e1.title": "Willkommenscocktail",
-    "timeline.e1.desc": "Begrüßungsaperitif im Garten",
-    "timeline.e2.time": "18:00",
-    "timeline.e2.title": "Zeremonie",
-    "timeline.e2.desc": "Gelübde austauschen",
-    "timeline.e3.time": "19:00",
-    "timeline.e3.title": "Buffet eröffnet",
-    "timeline.e3.desc": "Auswahl an Vorspeisen",
-    "timeline.e4.time": "20:00",
-    "timeline.e4.title": "Einzug des Brautpaares",
-    "timeline.e4.desc": "Anstoßen und begrüßen",
-    "timeline.e5.time": "20:30",
-    "timeline.e5.title": "Abendessen",
-    "timeline.e5.desc": "Beginn des Abendessens",
-    "timeline.e6.time": "22:30",
-    "timeline.e6.title": "Hochzeitstorte",
-    "timeline.e6.desc": "Tortenmoment",
-    "timeline.e7.time": "23:00",
-    "timeline.e7.title": "Party",
-    "timeline.e7.desc": "Open Bar und Tanz",
-
-    "quick.kicker": "KURZINFOS",
-    "quick.title": "Damit alles easy ist",
-    "quick.parking.title": "Anreise & Parken",
-    "quick.parking.body":
-      "Die Masseria liegt inmitten der Natur und bietet einen großen privaten Parkplatz auf dem Gelände – bequem ankommen, ohne Stress.",
-    "quick.dress.title": "Dresscode",
-    "quick.dress.body":
-      "Elegant, frei und mit Farbe. Wir lieben es, wenn jeder seinen Stil zeigt – wichtig ist, dass ihr euch wohlfühlt und ihr selbst seid.",
-    "quick.menu.title": "Menü",
-    "quick.menu.body":
-      "Das Menü ist überwiegend fischbasiert und mediterran, mit abwechslungsreichen Optionen, damit alle entspannt genießen können.",
-    "quick.allergies.title": "Allergien/Unverträglichkeiten",
-    "quick.allergies.body":
-      "Bitte gebt Allergien oder Unverträglichkeiten bei der Zusage an – wir berücksichtigen sie.",
-    "quick.kids.title": "Kinder",
-    "quick.kids.body":
-      "Kinder sind mehr als willkommen. Wir haben Animateure, damit die Kleinen Spaß haben und ihr entspannt feiern könnt.",
-    "quick.rsvp.title": "Zusage",
-    "quick.rsvp.body": "Bitte bestätigt so früh wie möglich, damit wir in Ruhe planen können.",
-
-    "acc.kicker": "UNTERKUNFT",
-    "acc.title": "Übernachtung & Transfer",
-    "acc.p1": "Für die Samstagnacht möchten wir, dass ihr einfach nur genießt.",
-    "acc.b1": "Bei eurer Ankunft in Neapel organisieren wir auf Wunsch den Transfer.",
-    "acc.b2":
-      "Die Unterkunft liegt sehr nah an der Location, damit ihr euch nur aufs Feiern konzentrieren könnt – ohne Zeiten oder Wege.",
-    "acc.p2":
-      "Wir stimmen alles persönlich mit euch ab, sobald ihr zugesagt habt, damit ihr euch um nichts kümmern müsst.",
-
-    "gifts.kicker": "EURE GROSSZÜGIGKEIT",
-    "gifts.title": "Geschenke",
-    "gifts.intro":
-      "Eure Anwesenheit ist das schönste Geschenk. Wenn ihr uns trotzdem eine Freude machen möchtet, findet ihr hier zwei optionale Möglichkeiten.",
-    "gifts.trip.title": "Zukünftige Reise",
-    "gifts.trip.body":
-      "Wir machen direkt nach der Hochzeit keine Hochzeitsreise. Später möchten wir eine besondere Reise machen – Japan ist einer unserer großen Träume. Wenn ihr dazu beitragen möchtet, freuen wir uns sehr.",
-    "gifts.contrib.title": "Beitrag",
-    "gifts.contrib.body":
-      "Für alle, die lieber einen Beitrag geben möchten: Hier sind die Daten diskret hinterlegt. Es ist absolut nicht nötig, aber wir nehmen es mit viel Dankbarkeit an.",
-    "gifts.iban.show": "IBAN anzeigen",
-    "gifts.iban.hide": "IBAN verbergen",
-    "gifts.iban.copy": "Kopieren",
-    "gifts.iban.copied": "Kopiert",
-    "gifts.iban.ask": "Wenn ihr möchtet, könnt ihr die Daten auch per Nachricht bei uns erfragen.",
-    "gifts.iban.aria": "IBAN kopieren",
-
-    "rsvp.kicker": "RÜCKMELDUNG",
-    "rsvp.title": "RSVP",
-    "rsvp.deadline": "Bitte antwortet bis zum ",
-    "rsvp.deadline.date": "1. April 2026",
-    "rsvp.name.label": "Vor- und Nachname *",
-    "rsvp.name.placeholder": "Dein Name",
-    "rsvp.email.label": "E-Mail *",
-    "rsvp.email.placeholder": "name@email.com",
-    "rsvp.attending.label": "Kommst du? *",
-    "rsvp.attending.yes": "Ja, ich komme",
-    "rsvp.attending.yes.hint": "Zusage",
-    "rsvp.attending.no": "Ich kann nicht kommen",
-    "rsvp.attending.no.hint": "Schade",
-    "rsvp.guests.label": "Wie viele Personen seid ihr? *",
-    "rsvp.guests.help": "Bitte dich selbst mitzählen.",
-    "rsvp.guests.1": "1 Person",
-    "rsvp.guests.2": "2 Personen",
-    "rsvp.guests.3": "3 Personen",
-    "rsvp.guests.4": "4 Personen",
-    "rsvp.guests.5": "5 Personen",
-    "rsvp.guests.6": "6 Personen",
-    "rsvp.dietary.label": "Allergien/Ernährung (optional)",
-    "rsvp.dietary.placeholder": "Vegetarisch, vegan, Unverträglichkeiten, ...",
-    "rsvp.companions.label": "Namen der Begleitpersonen (optional)",
-    "rsvp.companions.placeholder": "z. B. ...",
-    "rsvp.message.label": "Nachricht an das Brautpaar (optional)",
-    "rsvp.message.placeholder": "Kommentar...",
-    "rsvp.submit": "Antwort senden",
-    "rsvp.submitting": "Wird gesendet...",
-    "rsvp.toast.success": "Danke für deine Rückmeldung!",
-    "rsvp.toast.success.desc":
-      "Wir haben eure Antwort erhalten. Falls nötig, melden wir uns für die Details.",
-    "rsvp.toast.error": "RSVP konnte nicht gesendet werden",
-    "rsvp.toast.error.desc":
-      "Bitte Verbindung prüfen und erneut versuchen. Wenn es weiterhin nicht klappt, schreibt uns per WhatsApp.",
-    "rsvp.err.name": "Bitte Name eingeben",
-    "rsvp.err.email": "Bitte E-Mail eingeben",
-    "rsvp.err.email.invalid": "Ungültige E-Mail",
-    "rsvp.err.attending": "Bitte Option wählen",
-  },
 };
-
-export const SUPPORTED_LANGS: Lang[] = ["es", "it", "de"];

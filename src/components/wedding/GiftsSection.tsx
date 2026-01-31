@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { Plane, CreditCard, Copy, Check } from "lucide-react";
+import { CreditCard, Copy, Check } from "lucide-react";
 import { useI18n } from "@/i18n/I18nContext";
 
 /**
@@ -58,7 +58,7 @@ const GiftsSection = () => {
   };
 
   return (
-    <section className="section-padding bg-secondary">
+    <section className="section-padding bg-background">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -76,26 +76,7 @@ const GiftsSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-10">
-          {/* Viaje futuro */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.05 }}
-            className="text-center p-8"
-          >
-            <div className="w-16 h-16 rounded-full bg-sage-light/30 flex items-center justify-center mx-auto mb-6">
-              <Plane className="w-7 h-7 text-primary" />
-            </div>
-
-            <h3 className="heading-display text-xl text-foreground mb-3">{t('gifts.trip.title')}</h3>
-
-            <p className="text-body text-muted-foreground text-sm">
-              {t('gifts.trip.body')}
-            </p>
-          </motion.div>
-
+        <div className="grid md:grid-cols-1 gap-10">
           {/* Aportación / IBAN */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -111,7 +92,6 @@ const GiftsSection = () => {
             <h3 className="heading-display text-xl text-foreground mb-3">{t('gifts.contrib.title')}</h3>
 
             <p className="text-body text-muted-foreground text-sm mb-6">
-              {t('gifts.contrib.body')}
             </p>
 
             <button
@@ -148,6 +128,27 @@ const GiftsSection = () => {
                       </span>
                     )}
                   </button>
+                </div>
+
+                {/* Detalles bancarios (elegante y discreto) */}
+                <div className="mt-4 pt-4 border-t border-border/60 space-y-3">
+                  <div className="flex items-baseline justify-between gap-4">
+                    <p className="text-xs text-muted-foreground tracking-wide">
+                      {t('gifts.iban.holder')}
+                    </p>
+                    <p className="text-sm text-foreground font-medium">
+                      {t('gifts.iban.holder.value')}
+                    </p>
+                  </div>
+
+                  <div className="flex items-baseline justify-between gap-4">
+                    <p className="text-xs text-muted-foreground tracking-wide">
+                      {t('gifts.iban.purpose')}
+                    </p>
+                    <p className="text-sm text-foreground font-medium">
+                      {t('gifts.iban.purpose.value')}
+                    </p>
+                  </div>
                 </div>
 
                 <p className="text-xs text-muted-foreground mt-3">{t('gifts.iban.ask')}</p>
