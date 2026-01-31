@@ -40,7 +40,7 @@ function ClownIcon({ className }: IconProps) {
 }
 
 type QuickItem = {
-  icon: (props: IconProps) => JSX.Element;
+  icon: React.ComponentType<IconProps>;
   title: string;
   body: string;
 };

@@ -1,5 +1,7 @@
 export type Lang = "it";
 
+export const SUPPORTED_LANGS: Lang[] = ["it"];
+
 type Dict = Record<string, string>;
 
 // NOTE
@@ -26,19 +28,8 @@ export const TRANSLATIONS: Record<Lang, Dict> = {
     "countdown.seconds": "Secondi",
 
     "footer.dateLine": "27 giugno 2026 • Masseria Falco, Cellole (CE), Italia",
-    "footer.thanks": "Grazie per celebrare questo momento con noi. Non vediamo l'ora di vedervi lì!",
-    "footer.made": "Fatto con amore per la nostra famiglia e i nostri amici",
-
-    "footer.dateLine": "27 giugno 2026 • Masseria Falco, Cellole (CE), Italia",
     "footer.thanks": "Grazie per celebrare questo momento con noi. Non vediamo l'ora di vedervi lì.",
     "footer.made": "Fatto con amore per famiglia e amici",
-
-    "countdown.kicker": "Conto alla rovescia per",
-    "countdown.title": "Il nostro giorno speciale",
-    "countdown.days": "Giorni",
-    "countdown.hours": "Ore",
-    "countdown.minutes": "Minuti",
-    "countdown.seconds": "Secondi",
 
     "details.kicker": "VI ASPETTIAMO",
     "details.title": "Dettagli",
