@@ -1,24 +1,38 @@
-import HeroSection from "@/components/invitation/HeroSection";
-import CountdownTimer from "@/components/invitation/CountdownTimer";
-import OurStory from "@/components/invitation/OurStory";
-import EventDetails from "@/components/invitation/EventDetails";
-import GuestInfo from "@/components/invitation/GuestInfo";
-import RSVPSection from "@/components/invitation/RSVPSection";
-import MapSection from "@/components/invitation/MapSection";
-import Footer from "@/components/invitation/Footer";
+import { useState } from 'react';
+import IntroOverlay from '@/components/wedding/IntroOverlay';
+import HeroSection from '@/components/wedding/HeroSection';
+import CountdownSection from '@/components/wedding/CountdownSection';
+import DetailsSection from '@/components/wedding/DetailsSection';
+import TimelineSection from '@/components/wedding/TimelineSection';
+import FAQSection from '@/components/wedding/FAQSection';
+import GiftsSection from '@/components/wedding/GiftsSection';
+import RSVPSection from '@/components/wedding/RSVPSection';
+import Footer from '@/components/wedding/Footer';
 
 const Index = () => {
+  const [showIntro, setShowIntro] = useState(true);
+
+  const handleIntroComplete = () => {
+    setShowIntro(false);
+  };
+
   return (
-    <main className="min-h-screen bg-background overflow-x-hidden">
-      <HeroSection />
-      <CountdownTimer />
-      <OurStory />
-      <EventDetails />
-      <GuestInfo />
-      <RSVPSection />
-      <MapSection />
-      <Footer />
-    </main>
+    <div className="min-h-screen bg-background">
+      {/* Cinematic Intro Overlay */}
+      {showIntro && <IntroOverlay onComplete={handleIntroComplete} />}
+
+      {/* Main Website Content */}
+      <main>
+        <HeroSection />
+        <CountdownSection />
+        <DetailsSection />
+        <TimelineSection />
+        <FAQSection />
+        <GiftsSection />
+        <RSVPSection />
+        <Footer />
+      </main>
+    </div>
   );
 };
 
