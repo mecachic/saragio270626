@@ -2,9 +2,9 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
   plugins: [react()],
-  base: mode === "github" ? "/ejemplo-invitacion-boda/" : "/",
+  base: "/saragio270626/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
@@ -13,4 +13,4 @@ export default defineConfig(({ mode }) => ({
       "@hooks": path.resolve(__dirname, "src/hooks"),
     },
   },
-}));
+});
